@@ -12,17 +12,20 @@ int print_string(va_list args);
 int str_len(char *str);
 int print_percent(va_list args);
 
-/*selects the corrsponding function
-for given conversion specifier*/
 /**
+ * struct conversion_specifier - selects the corrsponding function
+ * for given conversion specifier
  *
+ * @sp: character
+ * @func: function pointer
  *
  **/
+
 typedef struct conversion_specifier
 {
 char sp;
 int (*func)(va_list);
-}spec;
+} spec;
 
 /*select function to print args*/
 int conv_spec(const char *, int *, va_list);
