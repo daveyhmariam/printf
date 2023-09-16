@@ -33,7 +33,7 @@ int print_string(va_list args)
 	int count = 0, printed = 0;
 	char *schar = va_arg(args, char *);
 
-	if(schar == NULL)
+	if (schar == NULL)
 	printed += write(1, "(null)", 6);
 
 	count = str_len(schar);
