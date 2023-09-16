@@ -14,6 +14,8 @@ int print_char(va_list args)
 	char *str = &buf;
 	int printed = 0;
 
+	if (buf == '\0')
+	return (1);
 	printed = write(1, str, 1);
 	return (printed);
 }
@@ -28,12 +30,15 @@ int print_char(va_list args)
 
 int print_string(va_list args)
 {
-	int count = 0;
+	int count = 0, printed = 0;
 	char *schar = va_arg(args, char *);
 
+	if(schar == NULL)
+	printed += write(1, "(null)", 6);
+
 	count = str_len(schar);
-	count = write(1, schar, count);
-	return (count);
+	printed += write(1, schar, count);
+	return (printed);
 }
 
 /**
@@ -48,6 +53,9 @@ int print_string(va_list args)
 int str_len(char *str)
 {
 	int count = 0;
+
+	if (str == NULL)
+	return (0);
 
 	while (str[count] != '\0')
 	{

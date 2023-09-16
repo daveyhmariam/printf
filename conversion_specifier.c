@@ -17,10 +17,13 @@ int conv_spec(const char *format, int *idx, va_list args)
 	int find;
 	int parse = ++(*idx);
 	int printed = 0;
-	spec specifier[3] = {   {'c', print_char},
+	spec specifier[4] = {   {'c', print_char},
 				{'s', print_string},
 				{'%', print_percent}
 			 };
+
+	if (format == NULL)
+	return (0);
 
 	for (find = 0; find < 3 && format[parse] != '\0'; find++)
 	{

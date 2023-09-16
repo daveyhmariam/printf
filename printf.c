@@ -17,8 +17,10 @@ int _printf(const char *format, ...)
 	va_list args;
 	char buffer[BUFF_SIZE];
 
-	if (format == NULL || format[0] == '\0')
-	return (printedTotal);
+	if (format == NULL)
+	return (-1);
+	if (format[0] == '\0')
+	return (0);
 
 	va_start(args, format);
 
