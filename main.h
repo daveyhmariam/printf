@@ -12,6 +12,7 @@ int print_string(va_list args);
 int str_len(char *str);
 int print_percent(va_list args);
 int print_num(va_list args);
+int binary_print(va_list args);
 
 /**
  * struct conversion_specifier - selects the corrsponding function
