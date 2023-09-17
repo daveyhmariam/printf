@@ -25,8 +25,9 @@ int conv_spec(const char *format, int *idx, va_list args)
 				{'b', binary_print}
 			 };
 
-	if (format == NULL)
+	if (format == NULL || format[parse] == '\0')
 	return (0);
+
 
 	for (find = 0; find < 6 && format[parse] != '\0'; find++)
 	{

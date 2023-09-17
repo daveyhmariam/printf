@@ -22,8 +22,8 @@ int print_num(va_list args)
 	}
 	temp = num;
 
-        if (temp == 0)
-        printed += write(1, "0", 1);
+	if (temp == 0)
+	printed += write(1, "0", 1);
 
 	while (temp != 0)
 	{

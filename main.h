@@ -6,7 +6,7 @@
 #include <unistd.h>
 #include <limits.h>
 #define UNUSED (void)
-#define BUFF_SIZE 1024
+#define BUFF_SIZE 7
 int _printf(const char *format, ...);
 int print_buf(char *buffer, int *buf_idx);
 int print_string(va_list args);

@@ -13,8 +13,8 @@
         int num, num2;
        
 
-        num = _printf("%d\n", INT_MAX);
-        num2 = printf("%d\n", INT_MAX);
+        num = _printf("%");
+        num2 = printf("%");
 
         printf("%d %d \n", num, num2);
         return (0);
