@@ -11,16 +11,20 @@
 
 int print_num(va_list args)
 {
-	int temp, count = 0, num = va_arg(args, int);
+	long int printed = 0, temp, count = 0, num = va_arg(args, int);
 	char chars[BUFF_SIZE];
 
 	if (num < 0)
 	{
 		chars[0] = '-';
-		num *= -1;
+		num = -1 * (unsigned int)num;
 		count += 1;
 	}
 	temp = num;
+
+        if (temp == 0)
+        printed += write(1, "0", 1);
+
 	while (temp != 0)
 	{
 		temp /= 10;
@@ -33,8 +37,8 @@ int print_num(va_list args)
 		num /= 10;
 		temp--;
 	}
-	count = write(1, chars, count);
-	return (count);
+	printed += write(1, chars, count);
+	return (printed);
 }
 
 /**
