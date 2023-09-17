@@ -30,7 +30,7 @@ int (*func)(va_list);
 } spec;
 
 /*select function to print args*/
-int conv_spec(const char *, int *, va_list);
+int conv_spec(const char *format, int *idx, va_list args);
 /*print char*/
 
 int print_char(va_list args);
