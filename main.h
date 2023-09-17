@@ -11,6 +11,7 @@ int print_buf(char *buffer, int *buf_idx);
 int print_string(va_list args);
 int str_len(char *str);
 int print_percent(va_list args);
+int print_num(va_list args);
 
 /**
  * struct conversion_specifier - selects the corrsponding function
