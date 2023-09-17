@@ -32,7 +32,6 @@ int conv_spec(const char *format, int *idx, va_list args)
 	{
 		if (specifier[find].sp == format[parse])
 		{
-			write(1, "inif", 4);
 			printed = specifier[find].func(args);
 			break;
 		}

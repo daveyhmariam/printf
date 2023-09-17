@@ -12,8 +12,8 @@
         int num, num2;
 
 
-        num = _printf("%k \n");
-        num2 = printf("%k \n");
+        num = _printf("%c \n", 'v');
+        num2 = printf("%c \n", 'v');
 
         printf("%d %d \n", num, num2);
         return (0);
