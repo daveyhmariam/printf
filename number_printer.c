@@ -52,7 +52,7 @@ int print_num(va_list args)
 int binary_print(va_list args)
 {
 	char temp, chars[BUFF_SIZE];
-	int len, i = 0, count = 0, num = va_arg(args, unsigned int);
+	unsigned int len, i = 0, count = 0, num = va_arg(args, unsigned int);
 
 	while (num != 0)
 	{
