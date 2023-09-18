@@ -11,10 +11,10 @@
  int main()
  {
         int num, num2;
-       long int res = (INT_MAX * 2L);
+       
 
-        num = _printf("%b + %b = %b\n", INT_MAX, INT_MAX, res);
-        num2 = printf("%b + %b = %b\n", INT_MAX, INT_MAX, res);
+        num = _printf("There is %b bytes in %b KB\n", 1024, 1);
+        num2 = printf("There is %b bytes in %b KB\n", 1024, 1);
 
         printf("%d %d \n", num, num2);
         return (0);

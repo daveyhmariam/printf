@@ -56,6 +56,8 @@ int binary_print(va_list args)
 
 	if (num == 0)
 	return (write(1, "0", 1));
+	if (num == 1)
+	return (write(1, "1", 1));
 
 	while (num != 0)
 	{
