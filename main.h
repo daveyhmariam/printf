@@ -14,6 +14,11 @@ int str_len(char *str);
 int print_percent(va_list args);
 int print_num(va_list args);
 int binary_print(va_list args);
+int unsigned_num(va_list args);
+int octal_print(va_list args);
+int hexacap_print(va_list args);
+int hexalow_print(va_list args);
+char hexa(int num, char ch);
 
 /**
  * struct conversion_specifier - selects the corrsponding function
