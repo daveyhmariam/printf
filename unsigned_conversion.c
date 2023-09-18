@@ -96,7 +96,7 @@ int hexacap_print(va_list args)
 
 	while (num != 0)
 	{
-		chars[count] = hexa((num / 16), 'A');
+		chars[count] = hexa((num % 16), 'A');
 		num /= 16;
 		count++;
 	}
