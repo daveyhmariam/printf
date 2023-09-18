@@ -18,7 +18,9 @@ int unsigned_num(va_list args);
 int octal_print(va_list args);
 int hexacap_print(va_list args);
 int hexalow_print(va_list args);
+int printcaps_string(va_list args);
 char hexa(int num, char ch);
+ int reverse_string(va_list args);
 
 /**
  * struct conversion_specifier - selects the corrsponding function
