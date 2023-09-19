@@ -102,12 +102,16 @@ int riot13_print(va_list args)
 
 	while (str[i] != '\0')
 	{
-		while (j < 53)
+		while (instring[j] != '\0')
 		{
 			if (str[i] == instring[j])
 			{
 				count += write(1, &outstring[j], 1);
 				break;
+			}
+			else if (instring[j + 1] == '\0')
+			{
+				count += write(1, &str[i], 1);
 			}
 			j++;
 		}
