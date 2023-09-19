@@ -41,11 +41,11 @@ int reverse_string(va_list args)
 
 	count = str_len(ch);
 
-	for (; count > -1; count--)
+	for (; count >= 0; count--)
 	{
 		i += write(1, &ch[count], 1);
 	}
-	return (i);
+	return (i - 1);
 }
 
 /**
