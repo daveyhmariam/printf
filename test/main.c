@@ -13,8 +13,8 @@
         int num1, num2;
         
 
-        num2 =_printf("");
-        num1 = printf("");
+        num2 =_printf("%R", "DANIEL");
+        num1 = printf("%R", "DANIEL");
 
         printf("%d %d \n", num2, num1);
         return (0);

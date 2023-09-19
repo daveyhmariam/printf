@@ -22,6 +22,7 @@ int printcaps_string(va_list args);
 char hexa(int num, char ch);
 int reverse_string(va_list args);
 int print_pointer(va_list args);
+int riot13_print(va_list args);
 
 /**
  * struct conversion_specifier - selects the corrsponding function

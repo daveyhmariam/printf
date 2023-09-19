@@ -84,3 +84,35 @@ int print_pointer(va_list args)
 	}
 	return (count);
 }
+
+/**
+ * riot13_print - prints string
+ *
+ * @args: va_list
+ *
+ * Return: integer
+ */
+
+int riot13_print(va_list args)
+{
+	char instring[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+	char outstring[] = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
+	char *str = va_arg(args, char *);
+	int i = 0, j = 0, count = 0;
+
+	while (str[i] != '\0')
+	{
+		while (j < 53)
+		{
+			if (str[i] == instring[j])
+			{
+				count += write(1, &outstring[j], 1);
+				break;
+			}
+			j++;
+		}
+		j = 0;
+		i++;
+	}
+	return (count);
+}
