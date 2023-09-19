@@ -18,7 +18,7 @@ int printcaps_string(va_list args)
 		if (((int)schar[count] > 0 && (int)schar[count] < 32)
 			|| (int)schar[count] >= 127)
 		{
-			printed += write(1, "\\0A", 3);
+			printed += write(1, "\\x0A", 4);
 			continue;
 		}
 		printed += write(1, &schar[count], 1);
