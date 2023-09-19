@@ -10,12 +10,12 @@
 
  int main()
  {
-        int num, num2;
-       
+        int num1, num2;
+        
 
-        num2 =_printf("Complete the sentence: You %r nothing, Jon Snow.\n", "");
-        num = printf("Complete the sentence: You %r nothing, Jon Snow.\n", "");
+        num2 =_printf("%c", '\0');
+        num1 = printf("%c", '\0');
 
-        printf("%d %d \n", num, num2);
+        printf("%d %d \n", num2, num1);
         return (0);
  }
