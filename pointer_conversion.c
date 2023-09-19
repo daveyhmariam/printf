@@ -36,14 +36,14 @@ int printcaps_string(va_list args)
 
 int reverse_string(va_list args)
 {
-	char rev[BUFF_SIZE], *ch = va_arg(args, char *);
+	char *ch = va_arg(args, char *);
 	int count, i = 0;
 
 	count = str_len(ch);
 
-	for (; count > -1; i++, count--)
+	for (; count > -1; count--)
 	{
-		rev[i] = ch[count];
+		i += write(1, &ch[count], 1);
 	}
-	return (write(1, &rev, i));
+	return (i);
 }
