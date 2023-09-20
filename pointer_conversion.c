@@ -45,7 +45,7 @@ int reverse_string(va_list args)
 	{
 		i += write(1, &ch[count], 1);
 	}
-	return (i - 1);
+	return (i);
 }
 
 /**
